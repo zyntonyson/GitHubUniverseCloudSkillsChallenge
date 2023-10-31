@@ -265,6 +265,32 @@ Ya ha probado el comando `git help`, pero vale la pena recordar ciertas cosas. U
 Recuerde que cada comando incluye también su propia página de ayuda. Para encontrar estas páginas de ayuda, escriba `git <command> --help`. Por ejemplo, `git commit --help` muestra una página que proporciona más información sobre el comando `git commit` y cómo usarlo.
 
 
+# Cuestionario sobre Control de Versiones
+
+1. ¿Cuál de los siguientes escenarios es un caso de uso habitual de un sistema de control de versiones?
+
+   - [ ] Eliminación de versiones anteriores de un proyecto o archivo para saber que se está trabajando solo con el archivo o los datos más recientes.
+   - [x] Realización de cambios experimentales en el proyecto en una rama aislada.
+   - [ ] Recopilación de requisitos de características de un proyecto grande y su comunicación a las partes interesadas.
+
+2. ¿Cuál es otro nombre para un sistema de control de versiones?
+
+   - [ ] Software de administración de versiones (VMS)
+   - [x] Sistema de administración de control de software (SCM)
+   - [ ] Sistema de administración de configuración de software (SCM)
+
+3. ¿Cuál es la diferencia entre Git y GitHub?
+
+   - [ ] Git permite trabajar con una o más ramas locales y enviar los cambios a un repositorio remoto. GitHub actúa como el repositorio remoto al que se accede por medio de un sitio web o herramientas de línea de comandos.
+   - [ ] Git es un sistema de control de versiones distribuido (DVCS) que se ejecuta en la nube. GitHub es una capa de interfaz que proporciona acceso a la tecnología de Git.
+   - [x] Git se usa por parte de un colaborador individual. GitHub se usa por parte de varios colaboradores para simplificar el trabajo de desarrollo en grupo.
+
+4. ¿Qué comando de Git ofrece información sobre cómo usar Git?
+
+   - [ ] git init
+   - [ ] git status
+   - [x] git help
+
 
 
 
