@@ -296,7 +296,7 @@ git branch add-style
 git checkout add-style
 ```
 
-En el directorio Alice/Assets (Alice/Recursos), abra site.css. Agregue la siguiente definición de clase CSS al final del archivo:
+En el directorio `Alice/Assets` (Alice/Recursos), abra site.css. Agregue la siguiente definición de clase CSS al final del archivo:
 
 ```
 .cat { max-width: 40%; padding: 5 }
@@ -316,14 +316,14 @@ git checkout main
 git pull
 ```
 
-La salida indica que la rama main está actualizada (es decir, main del equipo de Alice coincide con main en el repositorio compartido). Por tanto, Alice combina la rama add-style con la rama main mediante la ejecución del comando git merge --ff-only para realizar una combinación de avance rápido. Luego, Alice inserta la main de su repositorio en el compartido.
+La salida indica que la rama main está actualizada (es decir, main del equipo de Alice coincide con main en el repositorio compartido). Por tanto, Alice combina la rama `add-style`  con la rama main mediante la ejecución del comando `git merge --ff-only`  para realizar una combinación de avance rápido. Luego, Alice inserta la main de su repositorio en el compartido.
 
 ```
 git merge --ff-only add-style
 git push
 ```
 
-En este caso, la combinación de avance rápido no era estrictamente necesaria porque la rama main no tenía ningún cambio y Git habría combinado los cambios de todos modos. Sin embargo, usar la marca --ff only es una buena práctica porque se produce un error en una combinación de --ff-onlysi main ha cambiado.
+En este caso, la combinación de avance rápido no era estrictamente necesaria porque la rama main no tenía ningún cambio y Git habría combinado los cambios de todos modos. Sin embargo, usar la marca  `--ff only`  es una buena práctica porque se produce un error en una combinación de  `--ff-onlysi` main ha cambiado.
 
 
 
