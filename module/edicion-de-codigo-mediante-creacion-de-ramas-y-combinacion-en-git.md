@@ -56,8 +56,10 @@ Normalmente, una rama comienza con una confirmación en la rama predeterminada; 
 Supongamos que crea una rama a partir de la rama `main`. Aquí se muestra cómo visualizar lo que sucede:
 
 
+![Diagrama que muestra la relación de la rama principal con las ramas locales.
+](https://learn.microsoft.com/es-mx/training/modules/branch-merge-git/media/branch-tree.png)
 
-Diagrama que muestra la relación de la rama principal con las ramas locales.
+
 
 Cada letra mayúscula del diagrama representa una confirmación. Las ramas reciben nombres tales como `add-authentication` y `fix-css-bug`  , y pueden tener sus propias ramas. El objetivo final es dejar que los desarrolladores hagan lo que tienen que hacer sin interferir unos con otros y terminar con una rama principal que represente los mejores esfuerzos de todos los implicados.
 
