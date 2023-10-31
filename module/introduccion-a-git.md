@@ -82,3 +82,158 @@ Para entender Git, debe comprender la terminología. Esta es una breve lista de 
 
 Durante el transcurso de este módulo, usted creará su propio repositorio Git, aprenderá a hacer cambios en él y a trabajar con repositorios en GitHub. ¡Vamos a empezar!
 
+# Ejercicio: Prueba de Git
+
+Este módulo requiere un espacio aislado para completarse.
+
+> **Nota:** Un espacio aislado le da acceso a recursos gratuitos. No se le cobrará en su suscripción personal. El espacio aislado solo podrá usarse para completar el aprendizaje en Microsoft Learn. El uso para cualquier otro motivo está prohibido y podría generar la pérdida permanente del acceso al espacio aislado.
+> 
+> Microsoft ofrece esta experiencia de laboratorio y el contenido relacionado con fines educativos. Toda la información presentada es propiedad de Microsoft y está destinada únicamente a brindar información sobre los productos y servicios abordados en este módulo de Microsoft Learn.
+
+Para poder crear el primer repositorio, debe asegurarse de que Git está instalado y configurado. Git está preinstalado en Azure Cloud Shell, por lo que podemos usar Git en Cloud Shell, a la derecha.
+
+## Configuración de Git
+
+En Cloud Shell, para comprobar que Git está instalado, escriba `git --version`:
+
+``` 
+git --version
+``` 
+
+**Sugerencia:** Puede usar el botón `clipboard;` para copiar los comandos en el Portapapeles. Para pegarlos, haga clic con el botón derecho en una nueva línea en el terminal de Cloud Shell y seleccione Pegar, o bien use el método abreviado de teclado Mayús+Insert (`Cmd;+V en macOS).
+
+Debería ver una salida similar a la de este ejemplo:
+
+``` 
+git version 2.7.4
+``` 
+
+Para configurar Git, debe definir algunas variables globales: `user.name` y `user.email`. Ambas son necesarias para realizar confirmaciones.
+
+Establezca su nombre en Cloud Shell con el siguiente comando. Reemplace <USER_NAME> por el nombre de usuario que quiere usar.
+
+``` 
+git config --global user.name "<USER_NAME>"
+``` 
+
+Ahora, use este comando para crear una variable de configuración `user.email` para ello, reemplace <USER_EMAIL> por su dirección de correo electrónico:
+
+``` 
+git config --global user.email "<USER_EMAIL>"
+``` 
+
+Ejecute el siguiente comando para comprobar que los cambios han funcionado:
+
+``` 
+git config --list
+``` 
+
+Confirme que la salida incluye dos líneas similares al siguiente ejemplo. El nombre y la dirección de correo electrónico serán distintos a los que se muestran en el ejemplo.
+
+``` 
+user.name=User Name
+user.email=user-name@contoso.com
+``` 
+
+## Configuración del repositorio de Git
+
+Git funciona buscando cambios en los archivos dentro de una determinada carpeta. Vamos a crear una carpeta que actúe como árbol de trabajo (directorio del proyecto) y a permitir que Git sepa sobre ella para que pueda comenzar a seguir los cambios. Se indica a Git que empiece a realizar el seguimiento de los cambios mediante la inicialización de un repositorio de Git en esa carpeta.
+
+Empiece por crear una carpeta con el nombre Cats. Esta carpeta va a ser el directorio del proyecto, también denominado árbol de trabajo. El directorio del proyecto es donde se almacenan todos los archivos relacionados con el proyecto. En este ejercicio, es donde se almacenan el sitio web y los archivos que crean el sitio web y su contenido.
+
+``` 
+mkdir Cats
+``` 
+
+Vaya al directorio del proyecto mediante el comando cd:
+
+``` 
+cd Cats
+``` 
+
+Ahora, inicialice el nuevo repositorio y establezca el nombre de la rama predeterminada en main:
+
+Si está ejecutando la versión 2.28.0 o una posterior de Git, use el comando siguiente:
+
+``` 
+git init --initial-branch=main
+``` 
+
+O bien, use el siguiente comando:
+
+``` 
+git init -b main
+``` 
+
+En versiones anteriores de Git, use estos comandos:
+
+``` 
+git init
+git checkout -b main
+``` 
+
+Después de ejecutar el comando de inicialización, debería ver una salida similar a la de este ejemplo:
+
+``` 
+Initialized empty Git repository in /home/<user>/Cats/.git/
+Switched to a new branch 'main'
+``` 
+
+Ahora, use un comando `git status` para mostrar el estado del árbol de trabajo:
+
+``` 
+git status
+``` 
+
+Git responde con esta salida, que indica que master es la rama actual. (De hecho, también es la única rama). Por ahora todo está claro.
+
+``` 
+On branch master
+No commits yet
+nothing to commit (create/copy files and use "git add" to track)
+``` 
+
+Use un comando `ls` para mostrar el estado del árbol de trabajo:
+
+``` 
+ls -a
+``` 
+
+Confirme que el directorio contiene un subdirectorio denominado .git. (El uso de la opción -a con `ls` es importante, ya que Linux normalmente oculta los nombres de archivos y directorios que comienzan con un punto). Esta carpeta es el repositorio de Git: el directorio en el que Git almacena los metadatos y el historial del árbol de trabajo.
+
+Normalmente no se hace nada directamente con el directorio .git. Git actualiza los metadatos a medida que el estado del árbol de trabajo cambia para mantener un seguimiento de lo que ha cambiado en sus archivos. Este directorio es práctico para usted, pero es increíblemente importante para Git.
+
+### Ayuda desde Git
+
+Git, al igual que la mayoría de las herramientas de línea de comandos, tiene una función de ayuda integrada que se puede usar para buscar comandos y palabras clave.
+
+Escriba el comando siguiente para obtener ayuda sobre lo que puede hacer con Git:
+
+``` 
+git --help
+``` 
+
+El comando muestra la salida siguiente:
+
+``` 
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+[--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+[-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+[--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+<command> [<args>]
+...
+``` 
+
+Lea las distintas opciones disponibles con Git y observe que cada comando incluye su propia página de ayuda, para cuando empiece a profundizar más. No todos estos comandos tendrán sentido todavía, pero es posible que algunos le resulten familiares si tiene experiencia con un VCS.
+
+En la lección siguiente, empezará a realizar cambios y a ver cómo Git los rastrea.
+
+
+
+
+
+
+
+
+
+
