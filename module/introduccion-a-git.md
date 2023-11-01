@@ -1,5 +1,5 @@
 
-# Introducción a Git
+# Introducción a Git  [img](https://learn.microsoft.com/es-mx/training/modules/intro-to-git/)
 
 Descubra en qué consiste el control de código fuente y obtenga una introducción a Git, el sistema de control de versiones más popular del mundo.
 
